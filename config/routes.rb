@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :bookshelves
+  resources :books
   resources :users
 
   get "signup" => "users#new", :as => "signup"
