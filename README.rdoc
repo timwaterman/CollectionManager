@@ -3,26 +3,17 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+Items in my Collection:
 
-* Ruby version
+User: The model of a User. Stores Name and email address.
+Book: The model for a book. Has title, author, genre, and publication date.
+Bookshelf: Model of a bookshelf. Has a title.
 
-* System dependencies
+A User can have many bookshelves, and a bookshelf belongs to one user.
+A User has no direct relationship with an individual book.
+A bookshelf has and belongs to many books, and books also have and belong to many bookshelves.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+The point of this collection is that a User will be able to curate their own bookshelves of books
+and organize them however they see fit. The bookshelves will contain many books, and these
+books will also belong to many bookshelves, so the users can see which other users have read
+the same books as them. 
