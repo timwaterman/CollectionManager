@@ -1,7 +1,7 @@
 class Book
   include Mongoid::Document
 
-  has_and_belongs_to_many :bookshelf
+  has_and_belongs_to_many :bookshelves
 
   field :title, type: String
   field :author, type: String
