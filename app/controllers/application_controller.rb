@@ -6,9 +6,9 @@ class ApplicationController < ActionController::Base
   before_filter :require_user
 
   def current_user
-      puts "\n\nDo we ever even get here?\n\n\n"
+      #puts "\n\nDo we ever even get here?\n\n\n"
       if @current_user.nil?
-          puts "\nHow about here?\n"
+          #puts "\nHow about here?\n"
           @current_user = User.find(session[:user_id]) if session[:user_id]
           #return true
       end

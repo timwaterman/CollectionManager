@@ -26,6 +26,10 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
+    #@user.password = params[:password]
+
+    puts "USER PASSWORD: "
+    puts @user.password
 
     respond_to do |format|
       if @user.save
@@ -70,6 +74,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email)
+      params.require(:user).permit(:first_name, :last_name, :email, :password)
     end
 end

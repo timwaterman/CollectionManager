@@ -7,13 +7,16 @@ class SessionsController < ApplicationController
 
     def create
         user = User.find_by(email: params[:session][:email])
-        if user
+        #puts "\nCHECKING UNAME AND PASSWORD\n"
+        #puts "\n" + params[:session][:password] + "\n"
+        #puts "\n" + user.password + "\n"
+        if user && params[:session][:password] == user.password
             session[:user_id] = user.id
             puts "\n\nWelcome\n\n"
-            redirect_to users_path
+            redirect_to bookshelves_path
         else
-            render "new"
-            #redirect_to users/signup
+            #render "new"
+            redirect_to "/signup"
         end
     end
 
