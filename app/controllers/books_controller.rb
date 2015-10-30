@@ -12,6 +12,10 @@ class BooksController < ApplicationController
   def show
   end
 
+  def add
+    puts "\n\nADDING TO A BOOKSHELF\n\n"
+  end
+
   # GET /books/new
   def new
     @book = Book.new
@@ -69,6 +73,6 @@ class BooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      params.require(:book).permit(:title, :author, :genre, :year)
+      params.require(:book).permit(:title, :author, :isbn, :publisher, :year, :photo)
     end
 end

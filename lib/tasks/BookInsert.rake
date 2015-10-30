@@ -7,9 +7,9 @@ namespace :books do
 
 		require 'csv'
 
-		header = true
+		header = false
 
-		CSV.foreach("datasets/BX-Books.csv") do |row|
+		CSV.foreach("datasets/booktest.csv") do |row|
 			if header == true #strip out the headers
 				header = false
 			else

@@ -3,6 +3,12 @@ class SessionsController < ApplicationController
     skip_before_filter :require_user, :only => [:new, :create]
 
     def new
+        if current_user
+            redirect_to books_path
+            return
+        end
+
+        #redirect_to bookshelves_path
     end
 
     def create
