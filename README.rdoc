@@ -17,3 +17,6 @@ The point of this collection is that a User will be able to curate their own boo
 and organize them however they see fit. The bookshelves will contain many books, and these
 books will also belong to many bookshelves, so the users can see which other users have read
 the same books as them. 
+
+Ruby on Rails, Fall 2015
+- Jackie Lin, jl4162, was here (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧
