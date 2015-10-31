@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
+
 <p>
-  <% item = @book.photo %>
   <img src="<%= @book.photo %>">
 </p>
 
@@ -27,6 +27,16 @@
 <p>
   <strong>Year:</strong>
   <%= @book.year %>
+</p>
+
+<p>
+  <strong>On Bookshelves:</strong>
+  <% @shelves = @book.bookshelves %>
+  <% @shelves.each do |shelf| %>
+  <tr>
+    <td> <%= shelf.title %></td>
+  </tr>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |

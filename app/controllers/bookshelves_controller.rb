@@ -24,6 +24,11 @@ class BookshelvesController < ApplicationController
   # POST /bookshelves
   # POST /bookshelves.json
   def create
+
+    puts "\nHEY\n"
+    puts session[:email]
+
+
     @bookshelf = Bookshelf.new(bookshelf_params)
 
     respond_to do |format|
