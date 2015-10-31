@@ -2,25 +2,33 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @book.title if @book.present? %>
+  <%= @book.title %>
 </p>
 
 <p>
   <strong>Author:</strong>
-  <%= @book.author if @book.present?%>
+  <%= @book.author %>
 </p>
 
 <p>
-  <% url = @book.photo if @book.present?%>
-  <img src=url>
-  <% puts "\n\n\n" %>
-  <% puts url %>
+  <strong>Isbn:</strong>
+  <%= @book.isbn %>
+</p>
+
+<p>
+  <strong>Publisher:</strong>
+  <%= @book.publisher %>
 </p>
 
 <p>
   <strong>Year:</strong>
-  <%= @book.year if @book.present? %>
+  <%= @book.year %>
 </p>
 
-<%= link_to 'Edit', edit_book_path(@book) if @book.present? %> |
-<%= link_to 'Back', books_path if @book.present? %>
+<p>
+  <strong>Photo:</strong>
+  <%= @book.photo %>
+</p>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>

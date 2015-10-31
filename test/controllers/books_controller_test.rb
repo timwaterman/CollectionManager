@@ -18,7 +18,7 @@ class BooksControllerTest < ActionController::TestCase
 
   test "should create book" do
     assert_difference('Book.count') do
-      post :create, book: { author: @book.author, genre: @book.genre, title: @book.title, year: @book.year }
+      post :create, book: { author: @book.author, isbn: @book.isbn, photo: @book.photo, publisher: @book.publisher, title: @book.title, year: @book.year }
     end
 
     assert_redirected_to book_path(assigns(:book))
@@ -35,7 +35,7 @@ class BooksControllerTest < ActionController::TestCase
   end
 
   test "should update book" do
-    patch :update, id: @book, book: { author: @book.author, genre: @book.genre, title: @book.title, year: @book.year }
+    patch :update, id: @book, book: { author: @book.author, isbn: @book.isbn, photo: @book.photo, publisher: @book.publisher, title: @book.title, year: @book.year }
     assert_redirected_to book_path(assigns(:book))
   end
 

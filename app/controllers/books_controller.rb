@@ -12,10 +12,6 @@ class BooksController < ApplicationController
   def show
   end
 
-  def add
-    puts "\n\nADDING TO A BOOKSHELF\n\n"
-  end
-
   # GET /books/new
   def new
     @book = Book.new

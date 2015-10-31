@@ -9,9 +9,9 @@ class Book
   field :isbn, type: String
 
   #publisher and year info
-  field :publisher, type: String 
+  field :publisher, type: String
   field :year, type: Integer
-  
-  #string that hold the URL of a book photo
+
+  #string that holds the URL of a book photo
   field :photo, type: String
 end

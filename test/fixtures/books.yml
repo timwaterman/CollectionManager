@@ -1,13 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  author: MyString
-  genre: MyString
-  year: MyString
+  title: 
+  author: 
+  isbn: 
+  publisher: 
+  year: 
+  photo: 
 
 two:
-  title: MyString
-  author: MyString
-  genre: MyString
-  year: MyString
+  title: 
+  author: 
+  isbn: 
+  publisher: 
+  year: 
+  photo: 
