@@ -13,7 +13,7 @@ namespace :books do
 			if header == true #strip out the headers
 				header = false
 			else
-				ISBN = row[0]
+				isbn = row[0]
 				title = row[1]
 				author = row[2]
 
@@ -22,7 +22,7 @@ namespace :books do
 
 				url = row[6]
 
-				Book.create(title: title, author: author, isbn: ISBN, year: year, publisher: publisher, photo: url);
+				Book.create!(title: title, author: author, isbn: isbn, year: year, publisher: publisher, photo: url);
 
 				#now create a new book with all this information
 			end
