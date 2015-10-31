@@ -1,4 +1,8 @@
 <p id="notice"><%= notice %></p>
+<p>
+  <% item = @book.photo %>
+  <img src="<%= @book.photo %>">
+</p>
 
 <p>
   <strong>Title:</strong>
@@ -23,11 +27,6 @@
 <p>
   <strong>Year:</strong>
   <%= @book.year %>
-</p>
-
-<p>
-  <strong>Photo:</strong>
-  <%= @book.photo %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
