@@ -15,6 +15,7 @@ class BookshelvesController < ApplicationController
   # GET /bookshelves/new
   def new
     @bookshelf = Bookshelf.new
+    @bookshelf.user = User.find_by(email: session[:email])
   end
 
   # GET /bookshelves/1/edit
@@ -25,11 +26,11 @@ class BookshelvesController < ApplicationController
   # POST /bookshelves.json
   def create
 
-    puts "\nHEY\n"
-    puts session[:email]
-
-
     @bookshelf = Bookshelf.new(bookshelf_params)
+    @bookshelf.user = User.find_by(email: session[:email])
+    #puts "\n\n"
+    #puts @bookshelf.user_id
+    #puts "\n\n"
 
     respond_to do |format|
       if @bookshelf.save

@@ -5,5 +5,22 @@
   <%= @bookshelf.title %>
 </p>
 
+<p>
+  <strong>Current Books:</strong>
+  <% @shelves = @bookshelf.books %>
+  <% @shelves.each do |shelf| %>
+  <tr>
+    <td> <%= shelf.title %></td>
+  </tr>
+  <% end %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <% @usr = @bookshelf.user %>
+  <tr>
+    <td> <%= @usr.email %></td>
+  </tr>
+</p>
 <%= link_to 'Edit', edit_bookshelf_path(@bookshelf) %> |
 <%= link_to 'Back', bookshelves_path %>

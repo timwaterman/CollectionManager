@@ -18,6 +18,7 @@ class SessionsController < ApplicationController
         #puts "\n" + user.password + "\n"
         if user && params[:session][:password] == user.password
             session[:user_id] = user.id
+            session[:email] = user.email
             puts "\n\nWelcome\n\n"
             redirect_to bookshelves_path
         else

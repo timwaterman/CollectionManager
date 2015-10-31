@@ -17,3 +17,12 @@ The point of this collection is that a User will be able to curate their own boo
 and organize them however they see fit. The bookshelves will contain many books, and these
 books will also belong to many bookshelves, so the users can see which other users have read
 the same books as them. 
+
+I have the books being created by parsing in a csv file. I have it testing with a small file of
+about 30 books right now, but it has worked with the large csv file of 240K books.
+A user can log in with a username and password, and if that combination doesn't exist it will 
+prompt them. They can create bookshelves and browse books, but I'm having trouble linking up the 
+three models using the relations I have set up. I can print all the bookshelves that belong to each
+book, and vice-versa I can print out each book that's on a bookshelf. A bookshelf will have the
+current user set as an owner when it is created.
+
